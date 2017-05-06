@@ -27,14 +27,6 @@ public class StringParser implements ModelDriven<StringParserBean>, ServletReque
 	{
 		getResultString(parserBean.getString(), 0,0, parserBean.getString().length(),"");
 		addToValueStack("string", resultString);
-		
-		 // Write result into HttpServletResponse object
-		/*
-			response.setContentType("text/html");// No I18N
-        	response.setCharacterEncoding("UTF-8");// No I18N
-        	PrintWriter out = response.getWriter();
-        	out.write(resultString);
-        */
 		return "success";
 	}
 	private void getResultString(String inputString, int i, int j, int n, String tempString)
